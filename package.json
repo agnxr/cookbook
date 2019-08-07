@@ -1,8 +1,9 @@
 {
-  "name": "my-app",
+  "name": "test-setup",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "eslint": "^5.16.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
@@ -26,7 +27,6 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.0",
@@ -43,6 +43,7 @@
   },
   "lint-staged": {
     "*.js": [
+      "prettier --config .prettierrc --write",
       "eslint --fix",
       "git add"
     ]
