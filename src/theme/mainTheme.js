@@ -4,6 +4,7 @@ export const theme = {
   violet: '#e2eeff',
   green: '#ddfffc',
   yellow: '#ffffe3',
+  grey: '#a1aabb',
   light: 300,
   medium: 400,
   bold: 800,
