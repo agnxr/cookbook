@@ -8,7 +8,7 @@ import plusIcon from 'assets/icons/plus.svg';
 import drinkIcon from 'assets/icons/cocktail.svg';
 import ButtonIcon from './ButtonIcon';
 
-const YellowBackground = styled.div`
+const Background = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +18,7 @@ const YellowBackground = styled.div`
 `;
 
 storiesOf('ButtonIcon', module)
-  .addDecorator(story => <YellowBackground>{story()}</YellowBackground>)
+  .addDecorator(story => <Background>{story()}</Background>)
   .add('Muffin', () => <ButtonIcon icon={muffinIcon} />)
   .add('Active', () => <ButtonIcon active icon={muffinIcon} />)
   .add('Logout', () => <ButtonIcon icon={logoutIcon} />)
