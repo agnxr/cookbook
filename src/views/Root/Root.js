@@ -6,7 +6,7 @@ const App = () => (
   <div>
     <GlobalStyle />
     <h1>Hello World</h1>
-    <Button width="700px">CLOSE / SAVE</Button>
+    <Button width="150px">CLOSE / SAVE</Button>
     <Button secondary>Remove</Button>
   </div>
 );
