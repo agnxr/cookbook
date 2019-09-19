@@ -37,9 +37,9 @@ const StyledHeading = styled(Heading)`
   margin: 0;
 `;
 
-const Card = ({ activeColor }) => (
+const Card = ({ postType }) => (
   <StyledWrapper>
-    <InnerWrapper activeColor={activeColor}>
+    <InnerWrapper activeColor={postType}>
       <StyledHeading>Witaj Swiecie</StyledHeading>
       <DateInfo>3 days</DateInfo>
     </InnerWrapper>
@@ -55,11 +55,11 @@ const Card = ({ activeColor }) => (
 );
 
 Card.propTypes = {
-  activeColor: PropTypes.oneOf(['pink', 'lilac', 'blue']),
+  postType: PropTypes.oneOf(['dessert', 'dinner', 'drink']),
 };
 
 Card.defaultProps = {
-  activeColor: 'pink',
+  postType: 'dessert',
 };
 
 export default Card;

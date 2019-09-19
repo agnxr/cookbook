@@ -1,7 +1,7 @@
 export const theme = {
-  pink: '#ffdef2',
-  lilac: '#f2e2ff',
-  blue: '#e2eeff',
+  dessert: '#ffdef2',
+  dinner: '#f2e2ff',
+  drink: '#e2eeff',
   mint: '#ddfffc',
   yellow: '#ffffe3',
   grey: '#a1aabb',
