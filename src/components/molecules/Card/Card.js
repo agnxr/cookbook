@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import Heading from 'components/atoms/Heading/Heading';
@@ -15,7 +16,7 @@ const StyledWrapper = styled.div`
 
 const InnerWrapper = styled.div`
   padding: 20px 30px;
-  background-color: ${({ pink, theme }) => (pink ? theme.pink : 'white')};
+  background-color: ${({ activeColor, theme }) => (activeColor ? theme[activeColor] : 'white')};
 
   ${({ flex }) =>
     flex &&
@@ -36,9 +37,9 @@ const StyledHeading = styled(Heading)`
   margin: 0;
 `;
 
-const Card = () => (
+const Card = ({ activeColor }) => (
   <StyledWrapper>
-    <InnerWrapper pink>
+    <InnerWrapper activeColor={activeColor}>
       <StyledHeading>Witaj Swiecie</StyledHeading>
       <DateInfo>3 days</DateInfo>
     </InnerWrapper>
@@ -52,5 +53,13 @@ const Card = () => (
     </InnerWrapper>
   </StyledWrapper>
 );
+
+Card.propTypes = {
+  activeColor: PropTypes.oneOf(['pink', 'lilac', 'blue']),
+};
+
+Card.defaultProps = {
+  activeColor: 'pink',
+};
 
 export default Card;

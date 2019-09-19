@@ -1,8 +1,8 @@
 export const theme = {
   pink: '#ffdef2',
   lilac: '#f2e2ff',
-  violet: '#e2eeff',
-  green: '#ddfffc',
+  blue: '#e2eeff',
+  mint: '#ddfffc',
   yellow: '#ffffe3',
   grey: '#a1aabb',
   light: 300,
