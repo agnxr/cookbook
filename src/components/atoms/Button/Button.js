@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const Button = styled.button`
-  background-color: ${({ theme }) => theme.pink };
+  background-color: ${({ theme }) => theme.dessert};
   width: ${({ width }) => width || '220px'};
   height: 47px;
   border: none;
@@ -10,6 +10,7 @@ const Button = styled.button`
   font-weight: 500;
   font-size: 16px;
   text-transform: uppercase;
+  margin-top: 20px;
 
   ${({ secondary }) =>
     secondary &&

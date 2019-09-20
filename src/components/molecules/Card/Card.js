@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import Heading from 'components/atoms/Heading/Heading';
 import Button from 'components/atoms/Button/Button';
+import cupcakes from 'assets/cupcakes.jpg';
 
 const StyledWrapper = styled.div`
   box-shadow: 0 10px 30px -10px hsla(0, 0%, 0%, 0.1);
@@ -11,7 +12,7 @@ const StyledWrapper = styled.div`
   overflow: hidden;
   min-height: 300px;
   display: grid;
-  grid-template-rows: 0.25fr 1fr;
+  /* grid-template-rows: 0.25fr 1fr; */
 `;
 
 const InnerWrapper = styled.div`
@@ -37,10 +38,10 @@ const StyledHeading = styled(Heading)`
   margin: 0;
 `;
 
-const Card = ({ postType }) => (
+const Card = ({ postType, src, title }) => (
   <StyledWrapper>
     <InnerWrapper activeColor={postType}>
-      <StyledHeading>Witaj Swiecie</StyledHeading>
+      <StyledHeading>{title}</StyledHeading>
       <DateInfo>3 days</DateInfo>
     </InnerWrapper>
     <InnerWrapper flex>
@@ -49,6 +50,7 @@ const Card = ({ postType }) => (
         doloribus consequuntur eligendi illo repellat debitis? Minima, possimus facilis illo quia
         vel quis iure magnam tempore a!
       </Paragraph>
+      <img src={src} alt={title} width="500px" />
       <Button secondary>remove</Button>
     </InnerWrapper>
   </StyledWrapper>
@@ -56,10 +58,14 @@ const Card = ({ postType }) => (
 
 Card.propTypes = {
   postType: PropTypes.oneOf(['dessert', 'dinner', 'drink']),
+  src: PropTypes.string,
+  title: PropTypes.string,
 };
 
 Card.defaultProps = {
   postType: 'dessert',
+  src: cupcakes,
+  title: 'New recipe',
 };
 
 export default Card;
