@@ -12,6 +12,10 @@ const ButtonIcon = styled.button`
   border: 1px solid transparent;
   background-color: transparent;
   border-color: ${({ active }) => (active ? 'white' : 'transparent')};
+
+  &.active {
+    border-color: white;
+  }
 `;
 
 export default ButtonIcon;

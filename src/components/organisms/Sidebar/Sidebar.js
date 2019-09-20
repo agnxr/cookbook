@@ -42,21 +42,25 @@ const StyledIconsWrapper = styled.ul`
   list-style: none;
 `;
 
+const StyledLoginButton = styled(ButtonIcon)`
+  margin-top: auto; /* max distance from icons list*/
+`;
+
 const Sidebar = ({ tabType }) => (
   <StyledWrapper activeColor={tabType}>
     <StyledLogoLink to="/" />
     <StyledIconsWrapper>
       <li>
-        <ButtonIcon as={NavLink} to="/" icon={muffinIcon} />
+        <ButtonIcon as={NavLink} to="/" icon={muffinIcon} activeClass="active" />
       </li>
       <li>
-        <ButtonIcon as={NavLink} to="/dinners" icon={dinnerIcon} />
+        <ButtonIcon as={NavLink} to="/dinners" icon={dinnerIcon} activeClass="active" />
       </li>
       <li>
-        <ButtonIcon as={NavLink} to="/drinks" icon={drinkIcon} />
+        <ButtonIcon as={NavLink} to="/drinks" icon={drinkIcon} activeClass="active" />
       </li>
     </StyledIconsWrapper>
-    <ButtonIcon as={NavLink} to="/" icon={logoutIcon} />
+    <StyledLoginButton as={NavLink} to="/login" icon={logoutIcon} />
   </StyledWrapper>
 );
 
