@@ -17,7 +17,7 @@ const Background = styled.div`
   background: ${({ theme }) => theme.pink};
 `;
 
-storiesOf('ButtonIcon', module)
+storiesOf('Atoms/ButtonIcon', module)
   .addDecorator(story => <Background>{story()}</Background>)
   .add('Muffin', () => <ButtonIcon icon={muffinIcon} />)
   .add('Active', () => <ButtonIcon active icon={muffinIcon} />)
