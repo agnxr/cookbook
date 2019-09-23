@@ -1,5 +1,10 @@
 import React from 'react';
+import SidebarTemplate from 'templates/SidebarTemplate';
 
-const Desserts = () => <h1>Desserts view</h1>;
+const Desserts = () => (
+  <SidebarTemplate>
+    <h1>Desserts view</h1>
+  </SidebarTemplate>
+);
 
 export default Desserts;

@@ -51,7 +51,7 @@ const Sidebar = ({ tabType }) => (
     <StyledLogoLink to="/" />
     <StyledIconsWrapper>
       <li>
-        <ButtonIcon as={NavLink} to="/" icon={muffinIcon} activeClass="active" />
+        <ButtonIcon exact as={NavLink} to="/" icon={muffinIcon} activeClass="active" />
       </li>
       <li>
         <ButtonIcon as={NavLink} to="/dinners" icon={dinnerIcon} activeClass="active" />

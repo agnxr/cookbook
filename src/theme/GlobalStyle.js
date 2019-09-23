@@ -17,6 +17,8 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.6rem; /* 16px */
         font-family: 'Open Sans', sans-serif;
         background-color: #ddd;
+        /* sidebar */
+        padding-left: 150px; /* sidebar width */
     }
 `;
 
