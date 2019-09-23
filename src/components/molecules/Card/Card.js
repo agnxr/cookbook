@@ -38,6 +38,11 @@ const StyledHeading = styled(Heading)`
   margin: 0;
 `;
 
+const StyledImg = styled.img`
+  width: 100%;
+  height: auto;
+`;
+
 const Card = ({ postType, src, title }) => (
   <StyledWrapper>
     <InnerWrapper activeColor={postType}>
@@ -50,7 +55,7 @@ const Card = ({ postType, src, title }) => (
         doloribus consequuntur eligendi illo repellat debitis? Minima, possimus facilis illo quia
         vel quis iure magnam tempore a!
       </Paragraph>
-      <img src={src} alt={title} width="500px" />
+      <StyledImg src={src} alt={title} />
       <Button secondary>remove</Button>
     </InnerWrapper>
   </StyledWrapper>
